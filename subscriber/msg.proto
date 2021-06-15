@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package telemetry;
+
+message Gps_Imu {
+    float lat           = 1;
+    float lon           = 2;
+    float alt           = 3;
+    float heading       = 4;
+
+    int64 time          = 5;
+
+    float IMU_x_accel   = 6;
+    float IMU_y_accel   = 7;
+    float IMU_z_accel   = 8;
+    float IMU_Gyro_x    = 9;
+    float IMU_Gyro_y    = 10;
+    float IMU_Gyro_z    = 11;
+    float IMU_Gyro_Temp = 12;
+}

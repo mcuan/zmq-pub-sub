@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+    publisher:
+        build: publisher
+        command: ["/usr/src/pub-sub/publisher"]
+
+    subscriber:
+        build: subscriber
+        command: ["python3", "-u", "/usr/src/pub-sub/subscriber.py"]
+
+networks:
+    default:
+        name: pub-sub_default
